@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il sogno</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: beige;
+            background-image: url('sfondo 3.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; 
+        }
+        #banner {
+            background-color: rgba(122, 118, 75, 0.8);
+            color: white;
+            padding: 10px;
+            font-size: large;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        #banner h1 {
+            font-family: 'Lobster', cursive; 
+            font-size: 2.5em; 
+            margin: 0;
+        }
+        #navbar {
+            background-color: rgb(112, 98, 46);
+            color: #027d9b;
+            padding: 10px;
+            text-align: center;
+        }
+        #footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(112, 98, 46);
+            color: #fff;
+            padding: 5px 0;
+            text-align: center;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9); 
+            margin: 20px auto;
+            width: 80%;
+            max-width: 800px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        #navbar a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 10px;
+        }
+        #navbar a:hover {
+            background-color: #027d9b;
+        }
+        .section-box {
+            padding: 10px;
+            background-color: rgba(112, 98, 46, 0.8);
+            color: #140037;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        #slideshowContainer {
+            position: relative;
+            max-width: 400px; 
+            margin: auto;
+        }
+        .slides {
+            display: none;
+            width: 100%;
+            border-radius: 10px;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev {
+            left: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        #didascalia{
+            text-align: center;
+            font-style: italic;
+            font-weight: lighter;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="banner">
+    <h1>Il sogno</h1>
+</div>
+
+<div id="navbar">
+    <a href="index.html">Home</a> |
+    <a href="approfondimento.html">Approfondimento</a> |
+    <a href="fonti.html">Fonti</a>
+</div>
+
+<div class="content">
+    <p>
+        <div class="section-box">
+            <h2>Fonti utilizzate</h2>
+        </div>
+        <p>
+            -power point di arte su Salvador Dalì fornito gentilmente da Adriana Stellato<br>
+            -wikipedia per le didascalie delle opere<br>
+            -www.html.it per aiuti al codice<br>
+            -www.w3schools.com per aiuti al codice<br>
+            -aiuti forniti da altri compagni di classe
+        </p>
+        <br>
+        <h2>
+            Grazie per la visione!
+        </h2>
+        <br>
+        <p>
+            Qua vi lascio tre bellissime opere surrealiste realizzate da Salvador Dalì, 
+            <br>che ho voluto utilizzare come sfondo per la realizzazione del mio sito
+        </p>
+        <div id="slideshowContainer">
+            <img class="slides" src="sfondo 3.jpg" alt="Image 1">
+            <img class="slides" src="sfondoswag.jpg" alt="Image 2">
+            <img class="slides" src="sogno dalì.jpg" alt="Image 3">
+        
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+        <script>
+            let slideIndex = 0;
+            showSlides(slideIndex);
+            function showSlides(index) {
+                const slides = document.getElementsByClassName("slides");
+                if (index >= slides.length) { slideIndex = 0; }
+                if (index < 0) { slideIndex = slides.length - 1; }
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slides[slideIndex].style.display = "block";
+            }
+            function changeSlide(n) {
+                showSlides(slideIndex += n);
+            }
+        </script>
+        <div id="didascalia">
+            <p>
+                Metamorfosi di Narciso, La persistenza della memoria, Idillio atomico e uranico melanconico
+            </p>
+        </div>
+        <br>
+    </p>
+</div>
+
+<br><br><br><br><br><br>
+
+<div id="footer">
+  <p>Tondat Enrico</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il sogno</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: beige;
+            background-image: url('sfondoswag.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; 
+        }
+        #banner {
+            background-color: rgba(122, 118, 75, 0.8); 
+            color: white;
+            padding: 10px;
+            font-size: large;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        #banner h1 {
+            font-family: 'Lobster', cursive; 
+            font-size: 2.5em; 
+            margin: 0;
+        }
+        #navbar {
+            background-color: rgb(112, 98, 46);
+            color: #027d9b;
+            padding: 10px;
+            text-align: center;
+        }
+        #footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(112, 98, 46);
+            color: #fff;
+            padding: 5px 0;
+            text-align: center;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9); 
+            margin: 20px auto;
+            width: 80%;
+            max-width: 800px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        #navbar a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 10px;
+        }
+        #navbar a:hover {
+            background-color: #027d9b;
+        }
+        #sections {
+            margin-top: 20px;
+        }
+        #sections h2 {
+            color: #140037;
+        }
+        #dropdownContainer {
+            text-align: center;
+            margin: 20px 0;
+        }
+        #sectionSelect {
+            padding: 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: rgb(112, 98, 46);
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        #sectionSelect option {
+            background-color: rgb(112, 98, 46);
+            color: #fff;
+        }
+        .section-box {
+            padding: 10px;
+            background-color: rgba(112, 98, 46, 0.8);
+            color: #fff;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        #surrealismo img {
+            width: 40%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+        #salvadorDali img{
+            width: 40%; 
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+    </style>
+    <script>
+        function navigateToSection() {
+            const sectionId = document.getElementById("sectionSelect").value;
+            if (sectionId) {
+                document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+<div id="banner">
+    <h1>Il sogno</h1>
+</div>
+
+<div id="navbar">
+    <a href="index.html">Home</a> |
+    <a href="approfondimento.html">Approfondimento</a> |
+    <a href="fonti.html">Fonti</a>
+</div>
+
+<div id="dropdownContainer">
+    <select id="sectionSelect" onchange="navigateToSection()">
+        <option value="">Indice</option>
+        <option value="surrealismo">Surrealismo</option>
+        <option value="salvadorDali">Salvador Dalì</option>
+        <option value="metodoParanoicoCritico">Metodo paranoico-critico</option>
+    </select>
+</div>
+
+<div class="content">
+    <div id="sections">
+        <section id="surrealismo">
+            <div class="section-box">
+                <h2>Surrealismo</h2>
+            </div>
+            <p>Il sogno e l’arte <br>
+                Deriva dalla parola francese “surrealitè”, che significa realtà superiore. <br>
+                <img src="manifesto.jpg"><br>
+                Nasce nel 1924 con la pubblicazione del manifesto ad opera del poeta Andrè Breton, questo manifesto esponeva il fatto che il pensiero e la creazione artistica dovessero esprimersi in modo “automatico”, senza il controllo della ragione.<br> “Surrealismo è il dettato del pensiero con assenza di ogni controllo esercitato dalla ragione, al di là di ogni preoccupazione estetica e morale… Si basa sulla fede nell’onnipotenza del segno, nel gioco disinteressato del pensiero.”<br>
+                Le tematiche trattate dal surrealismo sono amore, sogno e follia, libertà creativa.<br><br>
+                <br><br></p>
+        </section>
+        <section id="salvadorDali">
+            <div class="section-box">
+                <h2>Salvador Dalì</h2>
+            </div>
+            <p><img src="salvador.jpg"><br>
+                Nasce a Figueras, in Catalogna l’11 maggio 1904<br>
+                I genitori lo convinsero di essere la reincarnazione del fratello morto.<br>
+                Si forma presso la Real Academia de Belles Artes di Madrid per poi, nel 1929, aderire alla corrente surrealista.<br>
+                Muore a Figueras il 23 gennaio 1989.<br><br>
+                <br><br></p>
+        </section>
+        <section id="metodoParanoicoCritico">
+            <div class="section-box">
+                <h2>Metodo paranoico-critico</h2>
+            </div>
+            <p>Dalì sviluppa una propria tecnica definita metodo paranoico-critico.<br>
+                La paranoia, secondo Dalì, è una malattia mentale cronica, con la quale l’individuo subisce delusioni sistematiche che possono manifestarsi come manie di persecuzione o di grandezza.<br>
+                Da ciò si possono generare allucinazioni e immagini nascenti dal torbido agitarsi dell’inconscio.<br>
+                L’artista riesce a fissare queste immagini sulla tela grazie alla realizzazione del delirio (momento critico).
+                </p></p>
+        </section>
+    </div>
+</div>
+
+<br><br><br><br><br><br>
+
+<div id="footer">
+  <p>Tondat Enrico</p>
+</div>
+
+</body>
+</html>
